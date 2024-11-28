@@ -1,135 +1,105 @@
 <!DOCTYPE html>
-
+<!--Made with ❤ by XUANZHI-->
+<!--该页面已接入百度统计-->
 <html>
 
 <head>
-    
   <meta charset="UTF-8">
   <meta name="theme-color" content="#e9f1e9">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv='content-language' content='zh-cn'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2025年高考倒计时</title>
-  <meta name="keywords" content="高考,倒计时,高考倒计时" />
-  <meta name="description" content="总是在最初的青春挥霍着岁月的生命,总是在最后的时光忆起最初的懈怠,时光一去不返,生命耗费不再,愿你能够珍爱生命,珍惜时间!" />
+  <title>高考倒计时</title>
   <!-- Bootstrap -->
   <link href="https://unpkg.zhimg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: "lazy";
-      src: url(./font/font.ttf);
+    body,
+    .main:before,
+    .glass:before {
+      background: url("https://s2.loli.net/2022/06/07/mti4GIwuRUoYe8l.jpg") 0 / cover fixed;
     }
-    @font-face {
-      font-family: "youshe";
-      src: url(./font/youshe.ttf);
-    }
-    body {
-      background: url("./img/img_api.php/?type=url") 0 / cover fixed;
-      z-index: 1;
-    }
-    body::after {
-      position: fixed;
-      left: 0;
-      top: 0;
-      content: '';
-      width: 100%;
-      height: 100%;
-      background-color:rgba( 0 0 0 / .5);
-      z-index: -1;
-    }   
-    h2,h3,p,span{
-      color: #fff;
-      text-shadow: 0 0 5px rgba(0 0 0 / .3)
-    }
-    h2 {
-      font-size: 100px;
-      margin-bottom: 48px;
-      font-family: "lazy";
-    }
-    h3 {
-      font-family: "youshe";
-      font-size: 150px;
-      display: inline-block;
-    }
-    .time {
-      font-size: 50px;
-      margin-right: 15px;
-    }
-    #saying-text {
-      color: #f5f5f5;
-      font-size: 40px;
-    }
-    #p {
-      margin-bottom: 50px;
-    }
-    
-    .time:last-child {
-      margin: 0;
-    }
-    .container {
-      text-align: center;
+
+    .main {
       position: absolute;
-      left: 50%;
-      top: 48%;
-      transform: translate(-50%,-50%);
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 350px;
+      height: 600px;
+      line-height: 2;
+      margin: auto;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .6);
+      overflow: hidden;
     }
-    @media screen and (max-width: 800px) {
-      h2 {
-        font-size: 30px;
-      }
-      h3 {
-        font-size: 96px;
-      }
-      .time {
-        font-size: 32px;
-        margin-right: 10px;
-      }
-      #saying-text {
-        font-size: 14px;
-      }
+
+    .main:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      filter: blur(20px);
+      z-index: -1;
+      margin: -30px;
     }
-    
-    .popup {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  padding: 1px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
-}
-.close-btn {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  font-size: 18px;
-  cursor: pointer;
-}
+
+    .glass {
+      line-height: 2;
+      margin: auto;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .6);
+      overflow: hidden;
+    }
+
+    .glass:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      filter: blur(20px);
+      z-index: -1;
+      margin: -30px;
+    }
+
+    .time {
+      color: gray;
+    }
   </style>
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?76d748872de14bad7ef88266420d87e4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </head>
 
 <body>
- 
+  <br class="brBefore">
+  <br class="brBefore">
   <div class="container">
-    <div class="glass">
-      <div class="main-content">
-          <h2 class="text-center" id="h">高考倒计时</h2>
-          <h3 class="text-center" id="p"></h3>
-          <p class="text-center" style="display: none" id="saying">“<i><span id="saying-text"></span></i>”</p>
-    
+    <div class="card glass"> <br>
 
-        <div><span>
-           <span id="bgi-txt"></span></p>
-        </span></div>
+      <div class="container"><br>
+        <p class="text-center" style="display: none" id="saying">“<i><span id="saying-text"></span></i>”</p><br>
+        <div id="2333">
+          <h3 class="text-center" id="h">距离2023高考还有</h3>
+          <h1 class="text-center" id="day"></h1>
+          <h2 class="text-center" id="p"></h2><br>
+        </div>
+        <br>
+      </div>
+      <br>
     </div>
-        <!--</p>-->
-    </div>
-          </div>
-        </dvi>
-
-
-
+  </div>
+  <br>
+  <br>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://unpkg.zhimg.com/jquery@3.5.0/dist/jquery.min.js"></script>
 
@@ -142,14 +112,7 @@
     function getDate() {
       var oDate = new Date();//获取日期对象
       var oldTime = oDate.getTime();//现在距离1970年的毫秒数
-      // 将目标日期设置为当前时间的后一年
-      var newDate = new Date();
-      newDate.setFullYear(oDate.getFullYear() + 1);
-      newDate.setMonth(5); // 月份从 0 开始，所以6月对应的是5
-      newDate.setDate(7);
-      newDate.setHours(0);
-      newDate.setMinutes(0);
-      newDate.setSeconds(0);
+      var newDate = new Date('2023/6/7 00:00:00');
       var newTime = newDate.getTime();//2023年高考离1970年的毫秒数
       var second = Math.floor((newTime - oldTime) / 1000);//未来时间距离现在的秒数
       var day = Math.floor(second / 86400);//整数部分代表的是天；一天有24*60*60=86400秒 ；
@@ -158,18 +121,16 @@
       second %= 3600; //余数代表 剩下的秒数；
       var minute = Math.floor(second / 60);
       second %= 60;
-      // document.getElementById("day").innerHTML = tow(day) + '<span class="time">天</span>';
-      var str = tow(day) + '<span class="time"> 天</span>'
-        + tow(hour) + '<span class="time"> 时</span>'
-        + tow(minute) + '<span class="time"> 分</span>'
-        + tow(second) + '<span class="time"> 秒</span>';
+      document.getElementById("day").innerHTML = tow(day) + '<span class="time">天</span>';
+      var str = tow(hour) + '<span class="time">小时</span>'
+        + tow(minute) + '<span class="time">分钟</span>'
+        + tow(second) + '<span class="time">秒</span>';
       oSpan.innerHTML = str;
     }
     getDate();
     setInterval(getDate, 500);
 
-    var saying_list = ["一蓑烟雨任平生",
-      "人在旅途，难免会遇到荆棘和坎坷，但风雨过后，一定会有美丽的彩虹。",
+    var saying_list = ["人在旅途，难免会遇到荆棘和坎坷，但风雨过后，一定会有美丽的彩虹。",
       "要想改变命运，首先改变自己。",
       "思路决定出路，气度决定高度，细节决定成败，性格决定命运。",
       "没有退路的时候，正是潜力发挥最大的时候。",
@@ -268,61 +229,10 @@
       "不要把负能量看做是消极，仇恨。其实它的作用是激励，它其实是现实。",
       "成功便是站起比倒下多一次。",
       "成功就是你被击落到失望的深渊之后反弹得有多高。",
-      "没人扶你的时候，自己站直，路还长，背影要美。	",
-      "像狗一样的学，像绅士一样的玩。",
-      "才华是刀刃，辛苦是刀石，很锋利的刀刃，若日久不用磨，也会生锈，成为废物",
-      "不以其道，得之不去也",
-      "向上的路，并不拥挤。拥挤是因为，大部分人选择了安逸",
-      "一个人经历越多真实虚假的东西以后，反而没有那么多的酸情，只会越来越沉默，越来越不想说。挫折经历得太少，才会觉得鸡毛蒜皮都是烦恼！",
-      "前行的路，不怕万人阻挡，只怕自己投降。人生的帆，不怕狂风巨浪，只怕自己没胆量。相信自己，定能铸造人生辉煌!",
-      "努力的意义，不在于一定会让你取得多大的成就，只是让你在平凡的日子里，泪得比原来的那个自己更好一点",
-      "如果不能成为最优秀的人，那就努力成为最真实的自己",
-      "我要不停的努力，成为一个优秀的人。努力是走向成功的唯一捷径",
-      "若有恒何必三更眠五更起，最无益莫过一日曝十日寒",
-      "今朝灯火阑珊处，何忧无友；它年折桂古蟾宫，必定有君",
-      "一心读遍圣贤书，三心二意无益处，四书五经励我志，五洲四海任我游，三堂二课皆用功，一生前程始于此",
-      "百尺高梧，撑得起一轮月色；数椽矮屋，锁不住五夜书声",
-      "有作为才有地位，有实力才有魅力，有眼界才有境界，有思路才有出路",
-      "人无我有，人有我精",
-      "凡事细心一点便少很多遗憾，学习最怕认真二字",
-      "晴天不铺路，雨天就踩泥",
-      "刺耳的话要冷静的听，奉承的话要警惕的听，反对的话要分析的听，批评的话要虚心的听，正确的话要诚恳的听，错误的话要参考的听",
-      "驾驭命运的舵是奋斗。不抱有一丝幻想，不放弃一点机会，不停止一日努力",
-      "如果惧怕前面跌宕的山岩，生命就永远只能是死水一潭",
-      "懦弱的人只会裹足不前，莽撞的人只能引为烧身，只有真正勇敢的人才能所向披靡",
-      "梯子的梯阶从来不是用来搁脚的，它只是让人们的脚放上一段时间，以便让别一只脚能够再往上登",
-      "平时没有跑发卫千米，占时就难以进行一百米的冲刺",
-      "没有激流就称不上勇进，没有山峰则谈不上攀登",
-      "山路曲折盘旋，但毕竟朝着顶峰延伸",
-      "即使道路坎坷不平，车轮也要前进；即使江河波涛汹涌，船只也航行",
-      "崇高的理想就象生长在高山上的鲜花。如果要搞下它，勤奋才能是攀登的绳索",
-      "种子牢记着雨滴献身的叮嘱，增强了冒尖的勇气",
-      "自然界没有风风雨雨，大地就不会春华秋实",
-      "只会幻想而不行动的人，永远也体会不到收获果实时的喜悦",
-      "勤奋是你生命的密码，能译出你一部壮丽的史诗",
-      "对于攀登者来说，失掉往昔的足迹并不可惜，迷失了继续前时的危险",
-      "奋斗者在汗水汇集的江河里，将事业之舟驶到了理想的彼岸",
-      "忙于采集的蜜蜂，无暇在人前高谈阔论",
-      "勇士搏出惊涛骇流而不沉沦，懦夫在风平浪静也会溺水",
-      "没有一个冬天不可逾越，没有一个春天不会来临。最慢的步伐不是跬步，而是徘徊，最快的脚步不是冲刺，而是坚持",
-      "成功没有快车道，幸福没有高速路。所有的成功，都来自不倦地努力和奔跑，所有的幸福都来自平凡的奋斗和坚持",
-      "如果你要为错过太阳流泪，那么你也要错过群星了",
-      "人生的上半场打不好没关系，还有下半场",
-      "把脸一直向着阳光，这样就不会看到阴影",
-      "人生就像一杯茶，不会苦一辈子，但会苦一阵子",
-      "你担心什么，什么就控制你",
-      "你若将过去抱得太紧，怎么能腾出手来拥抱现在？",
-      "不去努力争取，那你连失败的资格都没有！",
-      "人的一生中，最光辉的一天，并非功成名就的那天，而是从悲叹与绝望中产生对人生的挑战，勇敢迈向意志的那天——福楼拜",
-      "从不抱怨，做一件事情，力求把它做到内心标准，如此个性，是跟才华一样的重要存在——毕淑敏",
-      "我来不及认真地年轻，待明白过来时，只能选择认真地老去——三毛",
-      "纵使黑夜吞噬了一切，太阳还是可以重新回来——汪国真",
-      "生活总是遍体鳞伤，可是后来，那些受伤的地方一定会变成我们最强壮的地方——海明威",
-      "人生的上半场不好没关系，还有下半场",
-      "迷失的人迷失了，相逢的人会再相逢"];
+      "没人扶你的时候，自己站直，路还长，背影要美。	"];
 
     function sayings() {
-      return saying_list[Math.floor(Math.random() * 150)]
+      return saying_list[Math.floor(Math.random() * 100)]
     }
 
     $("#saying-text").html(sayings());
@@ -332,67 +242,9 @@
         $("#saying-text").html(sayings());
         $("#saying").fadeIn();
       });
-    }, 3600000);
-    
-//Ad
-function closePopup() {
-  var popup = document.getElementById("popup");
-  popup.style.display = "none";
-}
-
-function autoClosePopup() {
-  var popup = document.getElementById("popup");
-  setTimeout(function() {
-    popup.style.display = "none";
-  }, 10000); // 5000表示5秒后自动关闭，可根据需求自定义时间
-}
-
-var popup = document.createElement("div");
-popup.innerHTML = `
-  <div id="popup" class="popup">
-    <span class="close-btn" onclick="closePopup()">X</span>
-   
-  </div>`;
-
-document.body.appendChild(popup);
-
-//autoClosePopup();
+    }, 10000);
 
   </script>
-<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"JtgKfGRmq7d4JtDu",ck:"JtgKfGRmq7d4JtDu"})</script>
-<script no-pjax="">
-    var blog_running_days = document.getElementById("blog_running_days");
-    var blog_running_hours = document.getElementById("blog_running_hours");
-    var blog_running_mins = document.getElementById("blog_running_mins");
-    var blog_running_secs = document.getElementById("blog_running_secs");
-    function refresh_blog_running_time() {
-      var time = new Date() - new Date(2023, 2, 5, 0, 0, 0); /*此处日期的月份改为自己真正月份的前一个月*/
-      var d = parseInt(time / 24 / 60 / 60 / 1000);
-      var h = parseInt((time % (24 * 60 * 60 * 1000)) / 60 / 60 / 1000);
-      var m = parseInt((time % (60 * 60 * 1000)) / 60 / 1000);
-      var s = parseInt((time % (60 * 1000)) / 1000);
-      blog_running_days.innerHTML = d;
-      blog_running_hours.innerHTML = h;
-      blog_running_mins.innerHTML = m;
-      blog_running_secs.innerHTML = s;
-    }
-    refresh_blog_running_time();
-    if (typeof bottomTimeIntervalHasSet == "undefined") {
-      var bottomTimeIntervalHasSet = true;
-      setInterval(function () {
-        refresh_blog_running_time();
-      }, 500);
-    }
-  </script>
-<script>
-    // bing
-$(document).ready(()=>{
-  $.get('./img/img_api.php/?type=copyright',(data)=>{
-    let text = JSON.parse(data);
-    $('#bgi-txt').text(text.copyright)
-  })
-})
-</script>
 </body>
+
 </html>
